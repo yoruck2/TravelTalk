@@ -12,8 +12,8 @@ import UIKit
 class TalkListViewController: UIViewController {
     
     @IBOutlet var talkListTableView: UITableView!
-    
-    var searchedUserList: [User] = User.allCases {
+    let mockChats = MockCaht().mockChatList
+    lazy var searchedUserList: [ChatRoom] = mockChats {
         didSet {
             talkListTableView.reloadData()
         }
@@ -37,11 +37,7 @@ class TalkListViewController: UIViewController {
 
 extension TalkListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering {
             searchedUserList.count
-        } else {
-            User.allCases.count - 1
-        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -84,16 +80,16 @@ extension TalkListViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text?.lowercased() else {
-            searchedUserList = User.allCases
+            searchedUserList = mockChats
             return
         }
         
         if text == "" {
-            searchedUserList = User.allCases
+            searchedUserList = mockChats
             
         } else {
-            searchedUserList = User.allCases.filter {
-                $0.rawValue.lowercased().contains(text)
+            searchedUserList = mockChats.filter {
+                $0.chatroomName.lowercased().contains(text)
             }
         }
     }

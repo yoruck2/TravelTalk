@@ -9,7 +9,7 @@ import UIKit
 
 class TalkListTableViewCell: UITableViewCell {
 
-    var data: User?
+    var data: ChatRoom?
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var talkRoomTitleLabel: UILabel!
     @IBOutlet var recentMessageLabel: UILabel!
@@ -40,9 +40,9 @@ class TalkListTableViewCell: UITableViewCell {
         guard let data else {
             return
         }
-        profileImageView.image = UIImage(named: data.profileImage)
-        talkRoomTitleLabel.text = data.rawValue
-        recentMessageLabel.text = data.rawValue
-        recentMessageDateLabel.text = data.rawValue
+        profileImageView.image = UIImage(named: data.chatroomImage[0])
+        talkRoomTitleLabel.text = data.chatroomName
+        recentMessageLabel.text = data.chatList.last?.message
+        recentMessageDateLabel.text = data.chatList.last?.date
     }
 }

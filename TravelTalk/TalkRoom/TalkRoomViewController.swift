@@ -12,7 +12,8 @@ class TalkRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        navigationItem.title = "ff"
+        navigationItem.leftBarButtonItem?.title = ""
     }
     
 

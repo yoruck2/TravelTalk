@@ -63,13 +63,40 @@
                     <view key="view" contentMode="scaleToFill" id="3Sx-0Q-rRb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L6k-GH-Q0F">
+                                <rect key="frame" x="0.0" y="59" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keu-jk-soc">
+                                <rect key="frame" x="31.666666666666657" y="773" width="330" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="Djr-0p-3jE"/>
+                                    <constraint firstAttribute="height" constant="45" id="ySs-kT-JQb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hGA-7p-ifq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L6k-GH-Q0F" firstAttribute="trailing" secondItem="hGA-7p-ifq" secondAttribute="trailing" id="8Jt-EO-b5x"/>
+                            <constraint firstItem="hGA-7p-ifq" firstAttribute="bottom" secondItem="keu-jk-soc" secondAttribute="bottom" id="AXC-OA-Tuk"/>
+                            <constraint firstItem="keu-jk-soc" firstAttribute="top" secondItem="L6k-GH-Q0F" secondAttribute="bottom" constant="5" id="CPR-aP-LFk"/>
+                            <constraint firstItem="L6k-GH-Q0F" firstAttribute="top" secondItem="hGA-7p-ifq" secondAttribute="top" id="Cma-1f-YAw"/>
+                            <constraint firstItem="keu-jk-soc" firstAttribute="centerX" secondItem="3Sx-0Q-rRb" secondAttribute="centerX" id="iqJ-VX-9Ok"/>
+                            <constraint firstItem="L6k-GH-Q0F" firstAttribute="leading" secondItem="hGA-7p-ifq" secondAttribute="leading" id="vEP-qK-gxk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="talkRoomTableView" destination="L6k-GH-Q0F" id="okd-XR-vZX"/>
+                        <outlet property="talkRoomTextField" destination="keu-jk-soc" id="9L9-uK-QOF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9cO-du-9Qs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079" y="25"/>
+            <point key="canvasLocation" x="1078.6259541984732" y="24.647887323943664"/>
         </scene>
     </scenes>
     <resources>

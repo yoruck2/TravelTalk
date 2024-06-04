@@ -17,9 +17,14 @@
 		840338252C0E270000A30BB2 /* TalkRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840338242C0E270000A30BB2 /* TalkRoomViewController.swift */; };
 		840338282C0E277A00A30BB2 /* TalkListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840338272C0E277A00A30BB2 /* TalkListTableViewCell.xib */; };
 		840338292C0E277A00A30BB2 /* TalkListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840338262C0E277A00A30BB2 /* TalkListTableViewCell.swift */; };
-		8403382F2C0E286B00A30BB2 /* TalkRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8403382E2C0E286B00A30BB2 /* TalkRoomTableViewCell.xib */; };
-		840338302C0E286B00A30BB2 /* TalkRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403382D2C0E286B00A30BB2 /* TalkRoomTableViewCell.swift */; };
+		8403382F2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8403382E2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.xib */; };
+		840338302C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403382D2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.swift */; };
 		840338322C0E2A5F00A30BB2 /* ReusableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840338312C0E2A5F00A30BB2 /* ReusableProtocol.swift */; };
+		8403384A2C0EFD8A00A30BB2 /* DateFormmater+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840338492C0EFD8A00A30BB2 /* DateFormmater+.swift */; };
+		8403384D2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403384B2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.swift */; };
+		8403384E2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8403384C2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.xib */; };
+		840338502C0F3C4100A30BB2 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8403384F2C0F3C4100A30BB2 /* UIViewController+.swift */; };
+		840338522C0F49C800A30BB2 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840338512C0F49C800A30BB2 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +40,14 @@
 		840338242C0E270000A30BB2 /* TalkRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomViewController.swift; sourceTree = "<group>"; };
 		840338262C0E277A00A30BB2 /* TalkListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkListTableViewCell.swift; sourceTree = "<group>"; };
 		840338272C0E277A00A30BB2 /* TalkListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkListTableViewCell.xib; sourceTree = "<group>"; };
-		8403382D2C0E286B00A30BB2 /* TalkRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomTableViewCell.swift; sourceTree = "<group>"; };
-		8403382E2C0E286B00A30BB2 /* TalkRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkRoomTableViewCell.xib; sourceTree = "<group>"; };
+		8403382D2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomFriendTableViewCell.swift; sourceTree = "<group>"; };
+		8403382E2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkRoomFriendTableViewCell.xib; sourceTree = "<group>"; };
 		840338312C0E2A5F00A30BB2 /* ReusableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableProtocol.swift; sourceTree = "<group>"; };
+		840338492C0EFD8A00A30BB2 /* DateFormmater+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormmater+.swift"; sourceTree = "<group>"; };
+		8403384B2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkRoomUserTableViewCell.swift; sourceTree = "<group>"; };
+		8403384C2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkRoomUserTableViewCell.xib; sourceTree = "<group>"; };
+		8403384F2C0F3C4100A30BB2 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		840338512C0F49C800A30BB2 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				840338312C0E2A5F00A30BB2 /* ReusableProtocol.swift */,
+				8403384F2C0F3C4100A30BB2 /* UIViewController+.swift */,
+				840338492C0EFD8A00A30BB2 /* DateFormmater+.swift */,
 				840338222C0E24F000A30BB2 /* ChattingData.swift */,
 				8403382C2C0E27B300A30BB2 /* TalkList */,
 				8403382B2C0E27A500A30BB2 /* TalkRoom */,
@@ -79,6 +91,7 @@
 				840338192C0E1CDD00A30BB2 /* LaunchScreen.storyboard */,
 				840338172C0E1CDD00A30BB2 /* Assets.xcassets */,
 				8403381C2C0E1CDD00A30BB2 /* Info.plist */,
+				840338512C0F49C800A30BB2 /* PaddingLabel.swift */,
 			);
 			path = TravelTalk;
 			sourceTree = "<group>";
@@ -96,8 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				840338242C0E270000A30BB2 /* TalkRoomViewController.swift */,
-				8403382D2C0E286B00A30BB2 /* TalkRoomTableViewCell.swift */,
-				8403382E2C0E286B00A30BB2 /* TalkRoomTableViewCell.xib */,
+				8403384B2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.swift */,
+				8403384C2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.xib */,
+				8403382D2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.swift */,
+				8403382E2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.xib */,
 			);
 			path = TalkRoom;
 			sourceTree = "<group>";
@@ -170,7 +185,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8403382F2C0E286B00A30BB2 /* TalkRoomTableViewCell.xib in Resources */,
+				8403382F2C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.xib in Resources */,
+				8403384E2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.xib in Resources */,
 				840338182C0E1CDD00A30BB2 /* Assets.xcassets in Resources */,
 				840338282C0E277A00A30BB2 /* TalkListTableViewCell.xib in Resources */,
 				8403381B2C0E1CDD00A30BB2 /* Base in Resources */,
@@ -185,12 +201,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840338522C0F49C800A30BB2 /* PaddingLabel.swift in Sources */,
 				840338252C0E270000A30BB2 /* TalkRoomViewController.swift in Sources */,
+				8403384A2C0EFD8A00A30BB2 /* DateFormmater+.swift in Sources */,
 				840338132C0E1CDC00A30BB2 /* TalkListViewController.swift in Sources */,
-				840338302C0E286B00A30BB2 /* TalkRoomTableViewCell.swift in Sources */,
+				840338302C0E286B00A30BB2 /* TalkRoomFriendTableViewCell.swift in Sources */,
 				840338232C0E24F000A30BB2 /* ChattingData.swift in Sources */,
+				8403384D2C0F0DAB00A30BB2 /* TalkRoomUserTableViewCell.swift in Sources */,
 				8403380F2C0E1CDC00A30BB2 /* AppDelegate.swift in Sources */,
 				840338112C0E1CDC00A30BB2 /* SceneDelegate.swift in Sources */,
+				840338502C0F3C4100A30BB2 /* UIViewController+.swift in Sources */,
 				840338322C0E2A5F00A30BB2 /* ReusableProtocol.swift in Sources */,
 				840338292C0E277A00A30BB2 /* TalkListTableViewCell.swift in Sources */,
 			);

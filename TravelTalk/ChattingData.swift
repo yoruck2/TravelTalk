@@ -13,7 +13,7 @@ enum User: String, CaseIterable {
     case den = "Den"
     case other_friend = "내옆자리의앞자리에개발잘하는친구"
     case simsim = "심심이"
-    case user //본인
+    case user = "승현"
     
     var profileImage: String {
         switch self {
@@ -37,7 +37,7 @@ struct Chat {
     let message: String
 }
 
-struct MockCaht {
+struct MockChat {
     let mockChatList: [ChatRoom] = [
         ChatRoom(chatroomId: 1,
                  chatroomImage: [User.hue.profileImage, User.jack.profileImage, User.bran.profileImage, User.den.profileImage],

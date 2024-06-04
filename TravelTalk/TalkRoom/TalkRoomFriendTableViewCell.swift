@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TalkRoomTableViewCell: UITableViewCell {
+class TalkRoomFriendTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

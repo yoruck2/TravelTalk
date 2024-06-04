@@ -12,7 +12,8 @@ import UIKit
 class TalkListViewController: UIViewController {
     
     @IBOutlet var talkListTableView: UITableView!
-    let mockChats = MockCaht().mockChatList
+    
+    let mockChats = MockChat().mockChatList
     lazy var searchedUserList: [ChatRoom] = mockChats {
         didSet {
             talkListTableView.reloadData()
@@ -36,6 +37,11 @@ class TalkListViewController: UIViewController {
 }
 
 extension TalkListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        110
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             searchedUserList.count
     }
@@ -46,7 +52,7 @@ extension TalkListViewController: UITableViewDelegate, UITableViewDataSource {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: TalkRoomViewController.identifier) as! TalkRoomViewController
             
-//            vc.cityInfoData = data
+            vc.data = data
             
             navigationController?.pushViewController(vc, animated: true)
     }
@@ -57,7 +63,7 @@ extension TalkListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: TalkListTableViewCell.identifier, for: indexPath) as! TalkListTableViewCell
         
         cell.data = userData
-        cell.setUpData()
+        cell.configureData()
         return cell
     }
 }
@@ -69,6 +75,7 @@ extension TalkListViewController: UISearchResultsUpdating {
         let searchController = UISearchController(searchResultsController: nil)
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "친구 이름을 검색해보세요"
     }
     
     var isFiltering: Bool {

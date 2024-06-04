@@ -8,7 +8,7 @@
 import UIKit
 
 class TalkListTableViewCell: UITableViewCell {
-
+    
     var data: ChatRoom?
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var talkRoomTitleLabel: UILabel!
@@ -19,10 +19,6 @@ class TalkListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         configureLayout()
     }
-    
-//    override func layoutSubviews() {
-//        setUpData()
-//    }
     
     func configureLayout() {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
@@ -36,13 +32,17 @@ class TalkListTableViewCell: UITableViewCell {
         
     }
     
-    func setUpData() {
+    func configureData() {
         guard let data else {
             return
         }
-        profileImageView.image = UIImage(named: data.chatroomImage[0])
+        if data.chatroomImage.count > 1 {
+            profileImageView.image = UIImage(named: "mentors")
+        } else {
+            profileImageView.image = UIImage(named: data.chatroomImage[0])
+        }
         talkRoomTitleLabel.text = data.chatroomName
         recentMessageLabel.text = data.chatList.last?.message
-        recentMessageDateLabel.text = data.chatList.last?.date
+        recentMessageDateLabel.text = data.chatList.last?.date.formattedDotDate
     }
 }
